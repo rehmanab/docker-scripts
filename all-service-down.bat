@@ -1,0 +1,21 @@
+@echo off
+IF %1.==. GOTO 10
+set dockerContext=%1
+
+GOTO START
+
+:10
+  ECHO Using default docker context...
+  set dockerContext=default
+GOTO START
+
+:START
+	ECHO Using "%dockerContext%" as docker context
+	docker context use %dockerContext%
+	ECHO Start compose down
+	docker-compose -f services/docker-compose-redis.yml -p redis down
+	docker-compose -f services/docker-compose-seq.yml -p seq down
+
+:End1
+
+pause

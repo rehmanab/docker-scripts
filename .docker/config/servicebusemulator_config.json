@@ -55,7 +55,7 @@
             ]
           },
 		  {
-            "Name": "topica_azure_servicebus_topic_health_check_web_topic_1",
+            "Name": "topica_azure_sb_topic_health_check_web_topic_1",
             "Properties": {
               "DefaultMessageTimeToLive": "PT1H",
               "DuplicateDetectionHistoryTimeWindow": "PT20S",
@@ -63,7 +63,7 @@
             },
             "Subscriptions": [
               {
-                "Name": "topica_azure_servicebus_topic_health_check_web_queue_1",
+                "Name": "topica_azure_sb_topic_health_check_web_queue_1",
                 "Properties": {
                   "DeadLetteringOnMessageExpiration": false,
                   "DefaultMessageTimeToLive": "PT1H",

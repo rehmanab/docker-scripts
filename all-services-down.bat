@@ -5,8 +5,8 @@ set dockerContext=%1
 GOTO START
 
 :10
-  ECHO Using default docker context...
-  set dockerContext=default
+  ECHO Please add arg [default, dockerhost, etc]
+  GOTO End1
 GOTO START
 
 :START
@@ -15,6 +15,7 @@ GOTO START
 	ECHO Start compose down
 	docker-compose -f .docker/docker-compose-redis.yml -p redis down
 	docker-compose -f .docker/docker-compose-seq.yml -p seq down
+	docker-compose -f .docker/docker-compose-jaeger.yml -p jaeger down
 
 :End1
 

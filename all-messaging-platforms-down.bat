@@ -5,8 +5,8 @@ set dockerContext=%1
 GOTO START
 
 :10
-  ECHO Please add arg [default, dockerhost, etc]
-  GOTO End1
+  ECHO Using default docker context...
+  set dockerContext=default
 GOTO START
 
 :START

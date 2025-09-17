@@ -1,0 +1,17 @@
+# Up Windows
+docker-compose -f .docker/docker-compose-redis.yml -p redis up -d && ^
+docker-compose -f .docker/docker-compose-seq.yml -p seq up -d && ^
+docker-compose -f .docker/docker-compose-jaeger.yml -p jaeger up -d
+# Down Windows
+docker-compose -f .docker/docker-compose-redis.yml -p redis down && ^
+docker-compose -f .docker/docker-compose-seq.yml -p seq down && ^
+docker-compose -f .docker/docker-compose-jaeger.yml -p jaeger down
+  
+# Up macOS/Linux
+docker compose -f .docker/docker-compose-redis.yml -p redis up -d && \
+docker compose -f .docker/docker-compose-seq.yml -p seq up -d && \
+docker compose -f .docker/docker-compose-jaeger.yml -p jaeger up -d
+# Down macOS/Linux
+docker compose -f .docker/docker-compose-redis.yml -p redis down && \
+docker compose -f .docker/docker-compose-seq.yml -p seq down && \
+docker compose -f .docker/docker-compose-jaeger.yml -p jaeger down

@@ -5,7 +5,35 @@
         "Name": "sbemulatorns",
         "Queues": [
           {
-            "Name": "queue.1",
+            "Name": "memquran_web_update_queue1_v1",
+            "Properties": {
+              "DeadLetteringOnMessageExpiration": false,
+              "DefaultMessageTimeToLive": "PT1H",
+              "DuplicateDetectionHistoryTimeWindow": "PT20S",
+              "ForwardDeadLetteredMessagesTo": "",
+              "ForwardTo": "",
+              "LockDuration": "PT1M",
+              "MaxDeliveryCount": 3,
+              "RequiresDuplicateDetection": false,
+              "RequiresSession": false
+            }
+          },
+          {
+            "Name": "queue_health_check_web_queue_development",
+            "Properties": {
+              "DeadLetteringOnMessageExpiration": false,
+              "DefaultMessageTimeToLive": "PT1H",
+              "DuplicateDetectionHistoryTimeWindow": "PT20S",
+              "ForwardDeadLetteredMessagesTo": "",
+              "ForwardTo": "",
+              "LockDuration": "PT1M",
+              "MaxDeliveryCount": 3,
+              "RequiresDuplicateDetection": false,
+              "RequiresSession": false
+            }
+          },
+          {
+            "Name": "topica_web_analytics_adhoc_queue1_v1",
             "Properties": {
               "DeadLetteringOnMessageExpiration": false,
               "DefaultMessageTimeToLive": "PT1H",
@@ -54,8 +82,8 @@
               }
             ]
           },
-		  {
-            "Name": "topica_azure_sb_topic_health_check_web_topic_1",
+          {
+            "Name": "topic_health_check_web_topic_development",
             "Properties": {
               "DefaultMessageTimeToLive": "PT1H",
               "DuplicateDetectionHistoryTimeWindow": "PT20S",
@@ -63,7 +91,7 @@
             },
             "Subscriptions": [
               {
-                "Name": "topica_azure_sb_topic_health_check_web_queue_1",
+                "Name": "topic_health_check_web_queue_development",
                 "Properties": {
                   "DeadLetteringOnMessageExpiration": false,
                   "DefaultMessageTimeToLive": "PT1H",

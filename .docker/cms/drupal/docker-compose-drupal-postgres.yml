@@ -1,0 +1,31 @@
+#  docker-compose -f .docker/cms/drupal/docker-compose-drupal-postgres.yml -p drupal-postgres up -d
+#  docker-compose -f .docker/cms/drupal/docker-compose-drupal-postgres.yml -p drupal-postgres down
+
+# Drupal with PostgreSQL
+#
+# Access via "http://localhost:8080"
+#
+# During initial Drupal setup,
+# Database type: PostgreSQL
+# Database name: postgres
+# Database username: postgres
+# Database password: example
+# ADVANCED OPTIONS; Database host: postgres
+
+services:
+  drupal:
+    image: drupal:10-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - "~/.docker-data/drupal/modules:/var/www/html/modules"
+      - "~/.docker-data/drupal/profiles:/var/www/html/profiles"
+      - "~/.docker-data/drupal/themes:/var/www/html/themes"
+      - "~/.docker-data/drupal/sites:/var/www/html/sites"
+    restart: always
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: example
+    restart: always

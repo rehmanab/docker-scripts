@@ -3,7 +3,7 @@
     <deployment type="docker-compose.yml">
       <settings>
         <option name="composeProjectName" value="seq" />
-        <option name="sourceFilePath" value=".docker/docker-compose-seq.yml" />
+        <option name="sourceFilePath" value=".docker/monitoring/docker-compose-seq.yml" />
       </settings>
     </deployment>
     <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />

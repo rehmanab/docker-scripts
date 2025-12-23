@@ -3,7 +3,7 @@
     <deployment type="docker-compose.yml">
       <settings>
         <option name="composeProjectName" value="jaeger" />
-        <option name="sourceFilePath" value=".docker/docker-compose-jaeger.yml" />
+        <option name="sourceFilePath" value=".docker/monitoring/docker-compose-jaeger.yml" />
       </settings>
     </deployment>
     <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />

@@ -1,0 +1,9 @@
+# Up Windows
+docker-compose -f .docker/caching/docker-compose-redis.yml -p redis up -d && ^
+# Down Windows
+docker-compose -f .docker/caching/docker-compose-redis.yml -p redis down && ^
+  
+# Up macOS/Linux
+docker compose -f .docker/caching/docker-compose-redis.yml -p redis up -d && \
+# Down macOS/Linux
+docker compose -f .docker/caching/docker-compose-redis.yml -p redis down && \

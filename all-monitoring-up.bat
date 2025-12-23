@@ -13,9 +13,8 @@ GOTO START
 	ECHO Using "%dockerContext%" as docker context
 	docker context use %dockerContext%
 	ECHO Start compose up
-	docker-compose -f .docker/docker-compose-redis.yml -p redis up -d
-	docker-compose -f .docker/docker-compose-seq.yml -p seq up -d
-	docker-compose -f .docker/docker-compose-jaeger.yml -p jaeger up -d
+	docker-compose -f .docker/monitoring/docker-compose-seq.yml -p seq up -d
+	docker-compose -f .docker/monitoring/docker-compose-jaeger.yml -p jaeger up -d
 
 :End1
 

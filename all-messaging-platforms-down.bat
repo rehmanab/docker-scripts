@@ -13,11 +13,11 @@ GOTO START
 	ECHO Using "%dockerContext%" as docker context
 	docker context use %dockerContext%
 	ECHO Start compose down
-	docker-compose -f .docker/docker-compose-aws.yml -p aws down
-	docker-compose -f .docker/docker-compose-kafka.yml -p kafka down
-	docker-compose -f .docker/docker-compose-pulsar.yml -p pulsar down
-	docker-compose -f .docker/docker-compose-rabbitmq.yml -p rabbitmq down
-	docker-compose -f .docker/docker-compose-azure.yml -p azure down
+	docker-compose -f .docker/messaging/docker-compose-aws.yml -p aws down
+	docker-compose -f .docker/messaging/docker-compose-kafka.yml -p kafka down
+	docker-compose -f .docker/messaging/docker-compose-pulsar.yml -p pulsar down
+	docker-compose -f .docker/messaging/docker-compose-rabbitmq.yml -p rabbitmq down
+	docker-compose -f .docker/messaging/docker-compose-azure.yml -p azure down
 
 :End1
 

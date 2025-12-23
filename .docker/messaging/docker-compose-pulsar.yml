@@ -1,5 +1,5 @@
-#  docker-compose -f .docker/docker-compose-pulsar.yml -p pulsar up -d
-#  docker-compose -f .docker/docker-compose-pulsar.yml -p pulsar down
+#  docker-compose -f .docker/messaging/docker-compose-pulsar.yml -p pulsar up -d
+#  docker-compose -f .docker/messaging/docker-compose-pulsar.yml -p pulsar down
 #  The "advertisedListeners" for Pulsar broker should be set to a hostname without "-" 
 # e.g. dockerhost, atifdesktop (this hostname should be in hosts file pointing to the local ip or loopback address).
 # As long as "advertisedListeners" is set to a hostname that is on that machine's hostfile, Pulsar will connect using any hostname defined in "advertisedListeners".

@@ -1,5 +1,5 @@
-#  docker-compose -f .docker/docker-compose-seq.yml -p seq up -d
-#  docker-compose -f .docker/docker-compose-seq.yml -p seq down
+#  docker-compose -f .docker/monitoring/docker-compose-seq.yml -p seq up -d
+#  docker-compose -f .docker/monitoring/docker-compose-seq.yml -p seq down
 
 networks:
   seq:

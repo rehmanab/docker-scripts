@@ -1,5 +1,5 @@
-#  docker-compose -f .docker/docker-compose-kafka.yml -p kafka up -d
-#  docker-compose -f .docker/docker-compose-kafka.yml -p kafka down
+#  docker-compose -f .docker/messaging/docker-compose-kafka.yml -p kafka up -d
+#  docker-compose -f .docker/messaging/docker-compose-kafka.yml -p kafka down
 
 services:
 

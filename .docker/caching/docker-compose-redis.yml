@@ -1,5 +1,5 @@
-#  docker-compose -f .docker/docker-compose-redis.yml -p redis up -d
-#  docker-compose -f .docker/docker-compose-redis.yml -p redis down
+#  docker-compose -f .docker/caching/docker-compose-redis.yml -p redis up -d
+#  docker-compose -f .docker/caching/docker-compose-redis.yml -p redis down
 
 networks:
   redis:
